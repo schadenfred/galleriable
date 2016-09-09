@@ -1,8 +1,8 @@
 Description:
-    Generator to create initializers and migrations for Galleriable engine in your app.
+    Explain the generator
 
 Example:
-    rails generate galleriable:install
+    rails generate galleriable Thing
 
     This will create:
-      a route to the galleriable engine in your application
+        what/will/it/create
