@@ -1,0 +1,2 @@
+
+route "resources :people"
