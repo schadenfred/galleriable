@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Gallery:</strong>
+  <%= @slide.gallery_id %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @slide.photo_id %>
+</p>
+
+<p>
+  <strong>Properties:</strong>
+  <%= @slide.properties %>
+</p>
+
+<%= link_to 'Edit', edit_slide_path(@slide) %> |
+<%= link_to 'Back', slides_path %>
