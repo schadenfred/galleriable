@@ -6,7 +6,7 @@ class CreateGalleriablePhotos < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :caption
       t.integer :photographer_id
-      t.true :polymorphic
+      t.references :photographable, foreign_key: true
 
       t.timestamps
     end

@@ -56,7 +56,7 @@ module Galleriable
 
       # Only allow a trusted parameter "white list" through.
       def photo_params
-        params.require(:photo).permit(:image_uid, :image_name, :name, :caption, :photographer_id, :polymorphic)
+        params.require(:photo).permit(:image_uid, :image_name, :name, :caption, :photographer_id, :photographable_id)
       end
   end
 end

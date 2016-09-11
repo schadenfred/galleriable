@@ -56,7 +56,7 @@ module Galleriable
 
       # Only allow a trusted parameter "white list" through.
       def slide_params
-        params.require(:slide).permit(:gallery_id, :photo_id, :properties)
+        params.require(:slide).permit(:gallery_id, :photo_id, :comment)
       end
   end
 end

@@ -56,7 +56,7 @@ module Galleriable
 
       # Only allow a trusted parameter "white list" through.
       def gallery_params
-        params.require(:gallery).permit(:name, :properties, :polymorphic)
+        params.require(:gallery).permit(:name, :galleriable_id)
       end
   end
 end

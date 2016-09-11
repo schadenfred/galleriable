@@ -20,7 +20,7 @@ module Galleriable
 
     test "should create gallery" do
       assert_difference('Gallery.count') do
-        post galleries_url, params: { gallery: { name: @gallery.name, polymorphic: @gallery.polymorphic, properties: @gallery.properties } }
+        post galleries_url, params: { gallery: { galleriable_id: @gallery.galleriable_id, name: @gallery.name } }
       end
 
       assert_redirected_to gallery_url(Gallery.last)
@@ -37,7 +37,7 @@ module Galleriable
     end
 
     test "should update gallery" do
-      patch gallery_url(@gallery), params: { gallery: { name: @gallery.name, polymorphic: @gallery.polymorphic, properties: @gallery.properties } }
+      patch gallery_url(@gallery), params: { gallery: { galleriable_id: @gallery.galleriable_id, name: @gallery.name } }
       assert_redirected_to gallery_url(@gallery)
     end
 

@@ -20,7 +20,7 @@ module Galleriable
 
     test "should create slide" do
       assert_difference('Slide.count') do
-        post slides_url, params: { slide: { gallery_id: @slide.gallery_id, photo_id: @slide.photo_id, properties: @slide.properties } }
+        post slides_url, params: { slide: { comment: @slide.comment, gallery_id: @slide.gallery_id, photo_id: @slide.photo_id } }
       end
 
       assert_redirected_to slide_url(Slide.last)
@@ -37,7 +37,7 @@ module Galleriable
     end
 
     test "should update slide" do
-      patch slide_url(@slide), params: { slide: { gallery_id: @slide.gallery_id, photo_id: @slide.photo_id, properties: @slide.properties } }
+      patch slide_url(@slide), params: { slide: { comment: @slide.comment, gallery_id: @slide.gallery_id, photo_id: @slide.photo_id } }
       assert_redirected_to slide_url(@slide)
     end
 

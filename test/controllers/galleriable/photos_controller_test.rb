@@ -20,7 +20,7 @@ module Galleriable
 
     test "should create photo" do
       assert_difference('Photo.count') do
-        post photos_url, params: { photo: { caption: @photo.caption, image_name: @photo.image_name, image_uid: @photo.image_uid, name: @photo.name, photographer_id: @photo.photographer_id, polymorphic: @photo.polymorphic } }
+        post photos_url, params: { photo: { caption: @photo.caption, image_name: @photo.image_name, image_uid: @photo.image_uid, name: @photo.name, photographable_id: @photo.photographable_id, photographer_id: @photo.photographer_id } }
       end
 
       assert_redirected_to photo_url(Photo.last)
@@ -37,7 +37,7 @@ module Galleriable
     end
 
     test "should update photo" do
-      patch photo_url(@photo), params: { photo: { caption: @photo.caption, image_name: @photo.image_name, image_uid: @photo.image_uid, name: @photo.name, photographer_id: @photo.photographer_id, polymorphic: @photo.polymorphic } }
+      patch photo_url(@photo), params: { photo: { caption: @photo.caption, image_name: @photo.image_name, image_uid: @photo.image_uid, name: @photo.name, photographable_id: @photo.photographable_id, photographer_id: @photo.photographer_id } }
       assert_redirected_to photo_url(@photo)
     end
 

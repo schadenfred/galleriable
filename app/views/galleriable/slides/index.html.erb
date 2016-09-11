@@ -7,7 +7,7 @@
     <tr>
       <th>Gallery</th>
       <th>Photo</th>
-      <th>Properties</th>
+      <th>Comment</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,7 +17,7 @@
       <tr>
         <td><%= slide.gallery_id %></td>
         <td><%= slide.photo_id %></td>
-        <td><%= slide.properties %></td>
+        <td><%= slide.comment %></td>
         <td><%= link_to 'Show', slide %></td>
         <td><%= link_to 'Edit', edit_slide_path(slide) %></td>
         <td><%= link_to 'Destroy', slide, method: :delete, data: { confirm: 'Are you sure?' } %></td>

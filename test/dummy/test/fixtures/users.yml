@@ -2,8 +2,6 @@
 
 one:
   name: MyString
-  galleriable: one
 
 two:
   name: MyString
-  galleriable: two

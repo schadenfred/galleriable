@@ -3,9 +3,9 @@
 one:
   gallery_id: 1
   photo_id: 1
-  properties: 
+  comment: MyString
 
 two:
   gallery_id: 1
   photo_id: 1
-  properties: 
+  comment: MyString
