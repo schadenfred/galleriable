@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160913042947) do
+ActiveRecord::Schema.define(version: 20160913051502) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "galleriable_galleries", force: :cascade do |t|
     t.string   "name"
@@ -35,6 +36,15 @@ ActiveRecord::Schema.define(version: 20160913042947) do
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.index ["photographable_type", "photographable_id"], name: "by_photographable", using: :btree
+  end
+
+  create_table "galleriable_slides", force: :cascade do |t|
+    t.integer  "photo_id"
+    t.integer  "gallery_id"
+    t.hstore   "properties"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["photo_id", "gallery_id"], name: "index_galleriable_slides_on_photo_id_and_gallery_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
