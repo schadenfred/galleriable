@@ -1,15 +1,4 @@
 require 'test_helper'
-require 'dragonfly'
-
-module Galleriable
-  class PhotoTest < ActiveSupport::TestCase
-    # test "the truth" do
-    #   assert true
-    # end
-  end
-end
-
-
 
 describe Galleriable::Photo do
 
