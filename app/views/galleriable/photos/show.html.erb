@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image uid:</strong>
+  <%= @photo.image_uid %>
+</p>
+
+<p>
+  <strong>Image name:</strong>
+  <%= @photo.image_name %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @photo.name %>
+</p>
+
+<p>
+  <strong>Caption:</strong>
+  <%= @photo.caption %>
+</p>
+
+<p>
+  <strong>Photographer:</strong>
+  <%= @photo.photographer_id %>
+</p>
+
+<p>
+  <strong>Photographable:</strong>
+  <%= @photo.photographable %>
+</p>
+
+<%= link_to 'Edit', edit_photo_path(@photo) %> |
+<%= link_to 'Back', photos_path %>

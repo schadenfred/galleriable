@@ -10,15 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160911060012) do
+ActiveRecord::Schema.define(version: 20160913003004) do
 
-  create_table "galleriable_galleries", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "galleriable_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.index ["galleriable_id"], name: "index_galleriable_galleries_on_galleriable_id"
-  end
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "galleriable_photos", force: :cascade do |t|
     t.string   "image_uid"
@@ -26,18 +21,11 @@ ActiveRecord::Schema.define(version: 20160911060012) do
     t.string   "name"
     t.string   "caption"
     t.integer  "photographer_id"
+    t.string   "photographable_type"
     t.integer  "photographable_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-    t.index ["photographable_id"], name: "index_galleriable_photos_on_photographable_id"
-  end
-
-  create_table "galleriable_slides", force: :cascade do |t|
-    t.integer  "gallery_id"
-    t.integer  "photo_id"
-    t.string   "comment"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.index ["photographable_type", "photographable_id"], name: "by_photographable", using: :btree
   end
 
   create_table "users", force: :cascade do |t|

@@ -26,11 +26,14 @@ Gem::Specification.new do |s|
   # s.add_dependency "roo"
   s.add_dependency "sass"
   # s.add_dependency "kaminari"
+  s.add_dependency "dragonfly"
+  s.add_dependency "dragonfly-s3_data_store"
   # s.add_dependency "simple_form"
   s.add_dependency "factory_girl_rails"
 
   # development & testing
   s.add_development_dependency "minitest-rails-capybara"
+  s.add_development_dependency "minitest-given"
   s.add_development_dependency "launchy"
   s.add_development_dependency "guard-minitest"
   s.add_development_dependency "database_cleaner"
@@ -39,5 +42,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "better_errors"
   s.add_development_dependency "binding_of_caller"
 
-  s.add_development_dependency "sqlite3"
+  s.add_development_dependency "pg"
 end

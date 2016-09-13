@@ -5,3 +5,4 @@ class Galleriable::Test < ActiveSupport::TestCase
     assert_kind_of Module, Galleriable
   end
 end
+
