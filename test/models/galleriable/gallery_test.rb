@@ -13,8 +13,6 @@ describe Galleriable::Gallery do
       must_have_column(:name)
       must_have_column(:galleriable_type)
       must_have_column(:galleriable_id, :integer)
-      must_have_column(:properties, :json)
-
     end
 
     specify "store_accessor" do
@@ -24,7 +22,7 @@ describe Galleriable::Gallery do
 
     specify "indexes" do
 
-      must_have_index([:galleriable_id, :galleriable_type])
+      must_have_index([:galleriable_type, :galleriable_id])
     end
   end
 
