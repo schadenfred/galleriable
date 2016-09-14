@@ -9,6 +9,7 @@ describe Galleriable do
     describe "#{galleriable_model.to_s}" do
 
       specify "associations" do
+
         must_have_many :galleries
         must_have_many :slides
         must_have_many :photos

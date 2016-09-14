@@ -8,11 +8,6 @@ class GalleriableGenerator < Rails::Generators::NamedBase
   end
 
   def add_galleriable_to_models
-    insert_into_file "app/models/#{file_name}.rb", "  include Galleriable\n", :after => "ApplicationRecord\n"
+    insert_into_file "app/models/#{file_name}.rb", "  include Gallerify\n", :after => "ApplicationRecord\n"
   end
-
-  def copy_migrations
-    copy_file "initializer.rb", "config/initializers/#{file_name}.rb"
-  end
-
 end
