@@ -1,8 +1,8 @@
 require 'test_helper'
 
-describe "GalleriableConcern" do
+describe Galleriable do
 
-  ["User"].each do |galleriable_model|
+  ["User", "Car"].each do |galleriable_model|
 
     subject { galleriable_model.constantize }
 

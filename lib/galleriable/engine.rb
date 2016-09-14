@@ -5,7 +5,6 @@ module Galleriable
 
     initializer "initialize_migrations", before: :load_config_initializers do |app|
 
-
       config.paths["db/migrate"].expanded.each do |expanded_path|
         Rails.application.config.paths["db/migrate"] << expanded_path
       end

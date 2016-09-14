@@ -1,4 +1,4 @@
-module GalleriableConcern
+module Gallerify
 
   extend ActiveSupport::Concern
 

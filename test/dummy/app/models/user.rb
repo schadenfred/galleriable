@@ -1,3 +1,4 @@
 class User < ApplicationRecord
-  include GalleriableConcern
+
+  include Gallerify
 end
