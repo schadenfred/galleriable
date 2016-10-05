@@ -28,6 +28,8 @@ Gem::Specification.new do |s|
   # s.add_dependency "kaminari"
   s.add_dependency "dragonfly"
   s.add_dependency "dragonfly-s3_data_store"
+  s.add_dependency "dropzonejs-rails"
+
   # s.add_dependency "simple_form"
   s.add_dependency "factory_girl_rails"
 
