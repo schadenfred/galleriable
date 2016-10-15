@@ -5,7 +5,7 @@ module Gallerify
   included do
     has_many :galleries, as: :galleriable
     has_many :slides, through: :galleries
-    has_many :photos, as: :photographable
+    has_many :photos, as: :photographable, class_name: "Galleriable::Photo"
   end
 
   def default_gallery
