@@ -15,6 +15,7 @@ module Galleriable
 
     # GET /photos/new
     def new
+      debugger
       @photo = Photo.new
     end
 
@@ -45,7 +46,7 @@ module Galleriable
     # DELETE /photos/1
     def destroy
       @photo.destroy
-      redirect_to photos_url, notice: 'Photo was successfully destroyed.'
+      redirect_to :back, notice: 'Photo was successfully destroyed.'
     end
 
     private
