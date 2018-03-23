@@ -17,21 +17,13 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails"
-  # s.add_dependency "haml-rails"
-  # s.add_dependency "pg"
-  # s.add_dependency "aasm"
-  # s.add_dependency "carrierwave"
   s.add_dependency "jquery-rails"
-  # s.add_dependency "foundation-rails"
-  # s.add_dependency "roo"
   s.add_dependency "sass"
-  # s.add_dependency "kaminari"
   s.add_dependency "dragonfly"
   s.add_dependency "dragonfly-s3_data_store"
   s.add_dependency "dropzonejs-rails"
 
-  # s.add_dependency "simple_form"
-  s.add_dependency "factory_girl_rails"
+  s.add_development_dependency "factory_girl_rails"
 
   # development & testing
   s.add_development_dependency "minitest-rails-capybara"
